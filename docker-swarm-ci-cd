@@ -4,7 +4,9 @@ node{
   def nexus_tag = "172.31.24.222:8083/myweb:${version}"
   def mvnHome = tool name: 'maven-3', type: 'maven'
   def mvn = "${mvnHome}/bin/mvn"
-  stage('SCM Checkout'){
+  stage('SCM Checkout'){ 
+  
+  
     git 'https://github.com/javahometech/my-app'
   }
   stage('Maven Build'){
